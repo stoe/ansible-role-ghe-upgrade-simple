@@ -34,8 +34,6 @@ install:
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 
 script:
-  - echo "${TRAVIS_REPO_SLUG}"
-  - echo "${TRAVIS_PULL_REQUEST_SHA}"
   # Install latest role version (from PR)
   - ansible-galaxy install -f -p "tests/" "git+https://github.com/${TRAVIS_REPO_SLUG},${TRAVIS_PULL_REQUEST_SHA}"
   # Lint the role incl. tasks, handlers, meta
