@@ -35,7 +35,7 @@ install:
 
 script:
   # Install latest role version (from PR)
-  - ansible-galaxy install -f -p "tests/" "git+https://github.com/${TRAVIS_REPO_SLUG},${TRAVIS_PULL_REQUEST_SHA}"
+  - ansible-galaxy install -i -f -p "tests/" "git+https://github.com/${TRAVIS_REPO_SLUG},${TRAVIS_PULL_REQUEST_SHA:-master}"
   # Lint the role incl. tasks, handlers, meta
   - ansible-lint tests/test.yml
   # Check role syntax
