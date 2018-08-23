@@ -1,6 +1,13 @@
 ---
 language: python
-python: "2.7"
+python:
+  - "2.7"
+  - "3"
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - python: "3"
 
 # Use the new container infrastructure
 sudo: false
