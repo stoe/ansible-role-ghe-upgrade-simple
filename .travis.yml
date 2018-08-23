@@ -18,6 +18,11 @@ addons:
     packages:
     - python-pip
 
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
 install:
   # Install ansible
   - pip install ansible ansible-lint
