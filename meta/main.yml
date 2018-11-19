@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Stefan Stölzle
+  description: "A simple example role to upgrade GitHub Enterprise using Ansible."
+  company: "GitHub Inc."
+
+  license: license (MIT)
+
+  min_ansible_version: 2.6
+
+  galaxy_tags:
+    - github
+    - github-enterprise
+    - ghe
+    - update
+    - upgrade
+
+  dependencies: []
